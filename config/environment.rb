@@ -31,7 +31,6 @@ Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }
 Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 env_config = YAML.load_file(APP_ROOT.join('config', 'keys.yaml'))
 
-
 client = Twitter.configure do |config|
   config.consumer_key = env_config['YOUR_APP_CONSUMER_KEY']
   config.consumer_secret = env_config['YOUR_APP_CONSUMER_SECRET']

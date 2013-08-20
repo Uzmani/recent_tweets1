@@ -1,4 +1,8 @@
 get '/' do
+  # @name = Twitter.client.user.name
+  # @info = Twitter.client.user.description
+  @user_since = Twitter.client.user.created_at
+  @profile_image_url = Twitter.client.user.profile_image_url_https
   erb :index
 end
 
@@ -15,8 +19,8 @@ get '/username' do
   erb :username
 end
 
-post '/tweet' do
+post '/' do
   input = params[:new_tweet]
   Twitter.client.update(input)
-  erb :tweet
+  erb :index
 end
