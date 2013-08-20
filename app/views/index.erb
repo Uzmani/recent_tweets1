@@ -1,10 +1,19 @@
 <div class="container">
 
-<h1>Enter username</h1>
-
-  <form action="/username" method='get' >
-    <input type="text" name="username" >
-    <input type="submit" value="submit" >
+  <h1>Create a new Tweet</h1>
+  <h3>Enter contents of tweet:</h3>
+  <form action="/tweet" method="post">
+    <textarea cols="30" rows="5" name="new_tweet" class="new_tweet"></textarea>
+    <br><br>
+    <input type="submit" class="submit_tweet" value="Tweet!"/>
   </form>
 
+
+<h1>Find the last ten tweets from a user</h1>
+<h3>Enter a username:</h3>
+
+  <form action="/username" method='get'/>
+    <input type="text" name="username"/><br><br>
+    <input type="submit" value="submit"/>
+  </form>
 </div>
