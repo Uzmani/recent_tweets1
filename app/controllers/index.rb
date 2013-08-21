@@ -1,8 +1,4 @@
 get '/' do
-  # @name = Twitter.client.user.name
-  # @info = Twitter.client.user.description
-  @user_since = Twitter.client.user.created_at
-  @profile_image_url = Twitter.client.user.profile_image_url_https
   erb :index
 end
 
@@ -19,8 +15,14 @@ get '/username' do
   erb :username
 end
 
-post '/' do
-  input = params[:new_tweet]
-  Twitter.client.update(input)
-  erb :index
+post '/' do 
+
+  # Twitter.update("I'm tweeting this using my Ruby App!")
+  Twitter.client.update(params[:tweet_text])
+  @tweet= params[:tweet_text]
+  # "i am the new tweet: " + params[:tweet_text]
+   # erb :index
+   erb :_tweet_list, :layout => false
+   # return params[:tweet_text]
 end
+

@@ -1,24 +1,28 @@
-<div class="container">
-
-  <!-- <h1>Welcome, <%= @name %></h1> -->
-  <!-- <h5>Your information:</h5> -->
-  <!-- <img src="<%= @profile_image_url %>"/> -->
-  <!-- <p><%= @user_info %></p> -->
-  <h3>Create a new Tweet</h3>
-  <h4>Enter contents of tweet:</h4>
-  <form class="submit_tweet" action="/" method="post">
-    <textarea cols="30" rows="5" name="new_tweet" class="new_tweet"></textarea>
-    <br><br>
-    <input type="submit" value="Tweet!"/>
-    <br><br>
-  </form>
-<div id="attempt"></div>
+<!-- <div class="container">
 
 <h3>Find the last ten tweets from a user</h3>
 <h4>Enter a username:</h4>
-
   <form action="/username" method='get'/>
     <input type="text" name="username"/><br><br>
     <input type="submit" value="submit"/>
   </form>
+</div> -->
+
+
+<div class="container">
+
+<h3>Create a tweet!</h3>
+<h4>Enter a tweet here:</h4>
+  <form action="/" method='post' >
+    <textarea class="tweet_input" type="text" name="tweet_text"></textarea><br><br>
+    <input type="submit" value="tweet"/>
+  </form>
 </div>
+
+<div class="tweet-container">
+  
+</div>
+
+
+
+
