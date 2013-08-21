@@ -34,6 +34,6 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 client = Twitter.configure do |config|
   config.consumer_key = ENV['YOUR_APP_CONSUMER_KEY']
   config.consumer_secret = ENV['TWITTER_SECRET']
-  config.oauth_token = env_config['ACCESS_TOKEN']
-  config.oauth_token_secret = env_config['ACCESS_TOKEN_SECRET']
+  config.oauth_token = ENV['ACCESS_TOKEN']
+  config.oauth_token_secret = ENV['ACCESS_TOKEN_SECRET']
 end
