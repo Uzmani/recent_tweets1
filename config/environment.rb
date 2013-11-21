@@ -29,7 +29,7 @@ require APP_ROOT.join('config', 'database')
 # Set up the controllers and helpers
 Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }
 Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
-# env_config = YAML.load_file(APP_ROOT.join('config', 'keys.yaml'))
+env_config = YAML.load_file(APP_ROOT.join('config', 'keys.yaml'))
 
 client = Twitter.configure do |config|
   config.consumer_key = ENV['YOUR_APP_CONSUMER_KEY']

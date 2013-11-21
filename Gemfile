@@ -19,6 +19,8 @@ gem 'shotgun'
 
 gem 'twitter'
 
+gem 'newrelic_rpm'
+
 
 
 
