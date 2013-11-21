@@ -1,5 +1,7 @@
-source :rubygems
+source 'https://rubygems.org'
 
+
+ruby "1.9.3"
 # PostgreSQL driver
 gem 'pg'
 
@@ -20,6 +22,8 @@ gem 'shotgun'
 gem 'twitter'
 
 gem 'newrelic_rpm'
+
+
 
 
 
